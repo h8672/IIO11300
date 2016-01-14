@@ -1,8 +1,8 @@
 ﻿/*
 * Copyright (C) JAMK/IT/Esa Salmikangas
 * This file is part of the IIO11300 course project.
-* Created: 12.1.2016 Modified: 13.1.2016
-* Authors: Tero ,Esa Salmikangas
+* Created: 12.1.2016 Modified: 14.1.2016
+* Authors: Juha-Matti Kokkonen ,Esa Salmikangas
 */
 using System;
 using System.Collections.Generic;
@@ -38,6 +38,7 @@ namespace Tehtava1
             {
                 double result;
                 result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                System.Console.WriteLine("Perimeter: " + result);
             }
             catch (Exception ex)
             {
@@ -55,14 +56,5 @@ namespace Tehtava1
     }
   }
 
-  public class BusinessLogicWindow
-    {
-    /// <summary>
-    /// CalculatePerimeter calculates the perimeter of a window
-    /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+ 
 }
