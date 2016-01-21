@@ -19,7 +19,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Tehtava1
+namespace JAMK.IT.IIO11300
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
@@ -46,7 +46,7 @@ namespace Tehtava1
                 myRectangle.StrokeThickness = karmi;
                 //Ikkunan pinta-ala
                 result = BusinessLogicWindow.CalculatePerimeter(windowheight, windowwidth);
-                txtSqrPinta.Text = result.ToString();
+                txtWindowArea.Text = result.ToString();
 
                 //Karmin piiri...
                 result = BusinessLogicWindow.Calculate(windowwidth, windowheight, karmi);
@@ -71,6 +71,19 @@ namespace Tehtava1
     {
       Application.Current.Shutdown();
     }
+
+        private void btnCalculate00_Click(object sender, RoutedEventArgs e)
+        {
+            //olion avulla lasketaan pinta-ala, piiri ja
+            //luodaan olio
+            Ikkuna ikk = new Ikkuna();
+            ikk.Korkeus = Double.Parse(txtHeight.Text);
+            ikk.Leveys = Double.Parse(txtWidht.Text);
+            //VE0 pinta-ala olion metodi
+            //txtWindowArea.Text = ikk.LaskePintaAla().ToString();
+            //VE1 pinta-ala olion ominaisuus
+            txtWindowArea.Text = ikk.PintaAla.ToString();
+        }
   }
 
  
