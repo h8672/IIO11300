@@ -39,27 +39,21 @@ namespace Tehtava1
                 double result;
                 double windowheight = Convert.ToDouble(txtHeight.Text.ToString());
                 double windowwidth = Convert.ToDouble(txtWidht.Text.ToString());
-                double karmiwidth = Convert.ToDouble(txKarmi.Text.ToString());
+                double karmi = Convert.ToDouble(txtKarmi.Text.ToString());
+                //Laitetaan koot suorakulmiolle
                 myRectangle.Height = windowheight;
                 myRectangle.Width = windowwidth;
-                myRectangle.StrokeThickness = karmiwidth;
+                myRectangle.StrokeThickness = karmi;
                 //Ikkunan pinta-ala
                 result = BusinessLogicWindow.CalculatePerimeter(windowheight, windowwidth);
                 txtSqrPinta.Text = result.ToString();
 
                 //Karmin piiri...
-                double korkeus = windowheight + karmiwidth * 2;
-                double leveys = windowwidth + karmiwidth * 2;
-                result = korkeus * 2 + leveys * 2;
+                result = BusinessLogicWindow.Calculate(windowwidth, windowheight, karmi);
                 txtKarmiPiiri.Text = result.ToString();
 
                 //Karmin pinta-ala...
-                korkeus = windowheight + karmiwidth * 2;
-                leveys = karmiwidth;
-                //Leikattavat kulmat
-                double leikkaus = BusinessLogicWindow.CalculatePerimeter(karmiwidth, karmiwidth) / 2 * 4;
-                //Karmin pinta-ala, 4 leikattua sivua.
-                result = BusinessLogicWindow.CalculatePerimeter(korkeus, leveys) * 4 - leikkaus;
+                result = BusinessLogicWindow.CalculatePerimeter2(windowwidth, windowheight, karmi);
                 txtKarmiPinta.Text = result.ToString();
 
             }
