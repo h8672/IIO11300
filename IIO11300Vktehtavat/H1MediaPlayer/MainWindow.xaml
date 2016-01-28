@@ -5,11 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H1MediaPlayer"
         mc:Ignorable="d"
-        Title="My Finest Media Player" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="label" Content="Song" HorizontalAlignment="Left" Margin="120,35,0,0" VerticalAlignment="Top"/>
+        Title="My Finest Media Player" Height="303.547" Width="355.206">
+    <Grid Height="279" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="413*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="213*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="22" Margin="0,9,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="211" Grid.Column="1"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" Height="22" Margin="227,10,0,0" VerticalAlignment="Top" Width="76" Click="btnBrowse_Click" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Height="21" Margin="0,14,0,0" VerticalAlignment="Top" Width="70" Click="btnPlay_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Height="21" Margin="75,14,0,0" VerticalAlignment="Top" Width="70" Click="btnPause_Click" Grid.Row="1" RenderTransformOrigin="0.506,0.49" Grid.Column="1"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Height="21" Margin="150,14,0,0" VerticalAlignment="Top" Width="70" Click="btnStop_Click" Grid.Row="1" Grid.Column="1"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="167" Margin="0,10,0,0" VerticalAlignment="Top" Width="303" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Height="21" Margin="225,14,0,0" VerticalAlignment="Top" Width="70" Grid.Row="1" Grid.Column="1" Click="btnClose_Click"/>
     </Grid>
 </Window>
