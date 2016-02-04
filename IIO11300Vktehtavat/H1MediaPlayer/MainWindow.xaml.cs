@@ -24,15 +24,14 @@ namespace H1MediaPlayer
         bool isPlaying = false;
         public MainWindow() {
             InitializeComponent();
-            isPlaying = false;
             SetMyButtons();
-            btnStop.IsEnabled = false;
+            //btnStop.IsEnabled = false;
             txtFileName.Text = "";
         }
         private void SetMyButtons() {
-            btnPlay.IsEnabled = isPlaying;
+            btnPlay.IsEnabled = !isPlaying;
             btnPause.IsEnabled = isPlaying;
-            btnStop.IsEnabled = !isPlaying;
+            btnStop.IsEnabled = isPlaying;
         }
 
         private void btnBrowse_Click(object sender, RoutedEventArgs e)
@@ -80,7 +79,7 @@ namespace H1MediaPlayer
                 mediaElement.Pause();
                 isPlaying = false;
                 btnPause.Content = "Continue";
-                SetMyButtons();
+                btnPause.IsEnabled = true;
             }
             else {
                 mediaElement.Play();

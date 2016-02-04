@@ -21,7 +21,7 @@
         <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Height="21" Margin="0,14,0,0" VerticalAlignment="Top" Width="70" Click="btnPlay_Click" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Height="21" Margin="75,14,0,0" VerticalAlignment="Top" Width="70" Click="btnPause_Click" Grid.Row="1" RenderTransformOrigin="0.506,0.49" Grid.Column="1"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Height="21" Margin="150,14,0,0" VerticalAlignment="Top" Width="70" Click="btnStop_Click" Grid.Row="1" Grid.Column="1"/>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="167" Margin="0,10,0,0" VerticalAlignment="Top" Width="303" Grid.Row="2" Grid.Column="1"/>
+        <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" HorizontalAlignment="Left" Height="167" Margin="0,10,0,0" VerticalAlignment="Top" Width="303" Grid.Row="2" Grid.Column="1"/>
         <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Height="21" Margin="225,14,0,0" VerticalAlignment="Top" Width="70" Grid.Row="1" Grid.Column="1" Click="btnClose_Click"/>
     </Grid>
 </Window>
