@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H7ADONETConsole", "H7ADONET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H8ADONETlasnaolotWPF", "H8ADONETlasnaolotWPF\H8ADONETlasnaolotWPF.csproj", "{6F8C38CE-8D8F-4B4B-99D9-A682E8ACD6E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H10ADOBlanco", "IIO13200-ADONET-DEMO-master\H10ADOBlanco.csproj", "{078B472F-E0BE-4705-A004-3F2A11A96896}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{6F8C38CE-8D8F-4B4B-99D9-A682E8ACD6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8C38CE-8D8F-4B4B-99D9-A682E8ACD6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8C38CE-8D8F-4B4B-99D9-A682E8ACD6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078B472F-E0BE-4705-A004-3F2A11A96896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078B472F-E0BE-4705-A004-3F2A11A96896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078B472F-E0BE-4705-A004-3F2A11A96896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078B472F-E0BE-4705-A004-3F2A11A96896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
