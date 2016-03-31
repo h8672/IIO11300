@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H10ADOBlanco", "IIO13200-AD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H9BookshopORM", "H11kayttoliittyma\H9BookshopORM.csproj", "{4CABB55E-4B2C-4D78-8481-EB508658122E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H10BookShopEF", "H10BookShopEF\H10BookShopEF.csproj", "{BA6E27C9-2F41-4AF2-AED5-D6EDE05B16B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{4CABB55E-4B2C-4D78-8481-EB508658122E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CABB55E-4B2C-4D78-8481-EB508658122E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CABB55E-4B2C-4D78-8481-EB508658122E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6E27C9-2F41-4AF2-AED5-D6EDE05B16B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6E27C9-2F41-4AF2-AED5-D6EDE05B16B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6E27C9-2F41-4AF2-AED5-D6EDE05B16B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6E27C9-2F41-4AF2-AED5-D6EDE05B16B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

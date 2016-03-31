@@ -1,0 +1,57 @@
+﻿<Window x:Class="H10BookShopEF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H10BookShopEF"
+        mc:Ignorable="d"
+        Title="BookShopEF" Height="350" Width="750">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="120">
+                    <Button x:Name="btnHaeAsiakkaat" Margin="5" Click="btnHaeAsiakkaat_Click">Hae asiakkaat EF</Button>
+                    <Button x:Name="btnHaeKirjat" Margin="5" Click="btnHaeKirjat_Click">Hae kirjat EF</Button>
+                    <ComboBox x:Name="cbCountries" ItemsSource="{Binding}" Visibility="Hidden" SelectionChanged="cbCountries_SelectionChanged"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Background="LightSalmon">
+                    <StackPanel Orientation="Vertical" Width="60">
+                        <TextBlock>Tuote</TextBlock>
+                        <TextBlock>Nimi</TextBlock>
+                        <TextBlock>Kirjailija</TextBlock>
+                        <TextBlock>Maa</TextBlock>
+                        <TextBlock>Vuosi</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="300" x:Name="spBook">
+                        <TextBlock x:Name="txtTuote" Text="{Binding Path=DisplayName, Mode=OneWay}"/>
+                        <TextBox x:Name="txtName" Text="{Binding Path=name, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox x:Name="txtWriter" Text="{Binding Path=author, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox x:Name="txtCountry" Text="{Binding Path=country, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox x:Name="txtYear" Text="{Binding Path=year, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button x:Name="btnSave" Click="btnSave_Click">Tallenna</Button>
+                        <Button x:Name="btnNew" Click="btnNew_Click">Uusi</Button>
+                        <Button x:Name="btnDelete" Click="btnDelete_Click">Poista</Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Background="Lavender">
+                    <StackPanel Orientation="Vertical" Width="60">
+                        <TextBlock>Asiakas</TextBlock>
+                        <TextBlock>Etunimi</TextBlock>
+                        <TextBlock>Sukunimi</TextBlock>
+                        <TextBlock>Tilauksia</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="200" x:Name="spCustomer">
+                        <TextBlock Text="{Binding Path=DisplayName, Mode=OneWay}"/>
+                        <TextBox Text="{Binding Path=firstname, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Text="{Binding Path=lastname, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Text="{Binding Path=OrderCount, Mode=OneTime, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button x:Name="btnHaeTilaukset" Click="btnHaeTilaukset_Click">Hae asiakkaan tilaukset</Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <Grid Height="150">
+                <DataGrid x:Name="myGrid" ItemsSource="{Binding}" SelectionChanged="myGrid_SelectionChanged"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
