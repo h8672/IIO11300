@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JAMK.ICT.Properties {
+namespace H9BookshopORM.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,21 +25,12 @@ namespace JAMK.ICT.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("customer")]
-        public string Taulu {
-            get {
-                return ((string)(this["Taulu"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=eight.labranet.jamk.fi;Initial Catalog=Viini;Persist Security Info=Tr" +
-            "ue;User ID=koodari;Password=koodari13")]
-        public string Tietokanta {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=eight.labranet.jamk.fi;Initial Catalog=Bookshop;Persist Security Info" +
+            "=True;User ID=koodari;Password=koodari13")]
+        public string Kirjakauppa {
             get {
-                return ((string)(this["Tietokanta"]));
+                return ((string)(this["Kirjakauppa"]));
             }
         }
     }
